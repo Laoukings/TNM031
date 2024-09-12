@@ -1,3 +1,0 @@
-2024-09-12 16:47:03,768 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-09-12 16:58:29,783 [Worker-18: Fetching remote refs from Laoukings@github.com:Laoukings/TNM031.git] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2024-09-12 16:58:29,959 [Worker-18: Fetching remote refs from Laoukings@github.com:Laoukings/TNM031.git] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory; using Nio2ServiceFactoryFactory
