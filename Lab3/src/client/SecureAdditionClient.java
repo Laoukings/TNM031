@@ -11,10 +11,13 @@ public class SecureAdditionClient {
     private int port;
     // This is not a reserved port number 
     static final int DEFAULT_PORT = 8189;
-    static final String KEYSTORE = "LIUkeystore.ks";
-    static final String TRUSTSTORE = "LIUtruststore.ks";
+    //static final String KEYSTORE = "LIUkeystore.ks";
+    //static final String TRUSTSTORE = "LIUtruststore.ks";
     static final String KEYSTOREPASS = "123456";
     static final String TRUSTSTOREPASS = "abcdef";
+
+    static final String KEYSTORE = "Lab3\\src\\client\\LIUkeystore.ks";
+    static final String TRUSTSTORE = "Lab3\\src\\client\\LIUtruststore.ks";
 
     // Constructor @param host Internet address of the host where the server is located
     // @param port Port number on the host where the server is listening

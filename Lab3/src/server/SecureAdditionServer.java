@@ -11,11 +11,15 @@ public class SecureAdditionServer {
     private int port;
     // This is not a reserved port number
     static final int DEFAULT_PORT = 8189;
-    static final String KEYSTORE = "LIUkeystore.ks";
-    static final String TRUSTSTORE = "LIUtruststore.ks";
+    //static final String KEYSTORE = "LIUkeystore.ks";
+    //static final String TRUSTSTORE = "LIUtruststore.ks";
     static final String KEYSTOREPASS = "123456";
     static final String TRUSTSTOREPASS = "abcdef";
-
+    
+    // relative path to file
+    static final String KEYSTORE = "Lab3\\src\\server\\LIUkeystore.ks";
+    static final String TRUSTSTORE = "Lab3\\src\\server\\LIUtruststore.ks";
+    
     /**
      * Constructor
      *
@@ -60,7 +64,9 @@ public class SecureAdditionServer {
                 StringTokenizer st = new StringTokenizer(str);
                 try {
                     while (st.hasMoreTokens()) {
+                        // Double(String) is deprecated
                         Double d = new Double(st.nextToken());
+                        //Double d = new valueOf(st.nextToken());
                         result += d.doubleValue();
                     }
                     out.println("The result is " + result);
@@ -68,6 +74,7 @@ public class SecureAdditionServer {
                     out.println("Sorry, your list contains an invalid number");
                 }
             }
+            //closes the connection after calculating the sum
             incoming.close();
         } catch (Exception x) {
             System.out.println(x);
