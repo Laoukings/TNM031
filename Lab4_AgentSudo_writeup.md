@@ -27,7 +27,7 @@ Our approach to solving the challenge involves:
 #### Introduction to Linux
 If you never used Linux before it is important to understand the file structure of the operating system.  
 
-##### Understanding and Traversing the Filesystem
+##### Understanding the Filesystem
 The Linux filesystem is hierarchical (like Windows), starting from the root directory, denoted by `/`. Here are some key directories:
 
 - `/bin`: Essential command binaries
@@ -39,7 +39,8 @@ The Linux filesystem is hierarchical (like Windows), starting from the root dire
 
 The root user, also known as the superuser, has administrative privileges and can perform any task on the system.
 
-the file system can be accessed through the file explorer similar to Windows and MacOS **OR** more commonly used the *terminal*. The commands to traverse and use the file system in the terminal is:
+##### Traversing the Filesystem
+the file system can be accessed through the *file explorer* similar to Windows and MacOS **OR** more commonly used the *terminal*. The commands to traverse and use the file system in the terminal is:
 - `ls`: Lists the contents of a directory.
 - `cd`: **C**hanges the current **d**irectory.
 - `pwd`: **P**rints the current **w**orking **d**irectory.
@@ -51,6 +52,17 @@ the file system can be accessed through the file explorer similar to Windows and
 - `find`: Searches for files and directories.
 
 `cd` and `ls` are the most commonly used commands. `cd` 
+
+#### Setting up Linux the Enviroment
+There are two ways of doing the challange. The first option is by using TryHackMe's provided virtual machine that is called AttackBox, which is free for 1 hour a day. The second option is to use your own install of Linux, such as Kali Linux, and use the VPN provided by TryHackMe to connect to the challage.
+
+    ##### Accessing the AttackBox on TryHackMe
+    To access the AttackBox on TryHackMe, navigate to the **Agent Sudo** room. Look for the "Start AttackBox" button, usually located on the left side of the interface. Click this button to initiate the AttackBox. The AttackBox is a virtual machine provided by TryHackMe for conducting your tasks. Once the AttackBox is running, you can interact with it directly through your browser, the tools required to complete the challage are pre-installed.
+
+    ##### Accessing the Challage with your own Linux Machine
+    To access the challenge with your own Linux machine, you need to connect to TryHackMe's network using a VPN. First, download the OpenVPN configuration file from the TryHackMe website. Then, use the `openvpn` command to connect: `sudo openvpn --config <path-to-config-file>`. Once connected, you can access the challenge environment as if you were using the AttackBox. The required tools might possibly not be installed but are easily installed if needed. 
+
+
 
 
 ### Conclusion
