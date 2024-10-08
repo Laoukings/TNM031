@@ -13,7 +13,7 @@ Welcome to the detailed and beginner-friendly writeup for the **Agent Sudo** CTF
 4. [Conclusion](#conclusion)
 
 ### Introduction
-This writeup will explore the **Agent Sudo** challenge, breaking down each step to uncover the solution. This guide is intended for complete beginners to hacking and will explain the approach and techniques used.
+This writeup will explore the **Agent Sudo** challenge, breaking down each step to uncover the solution. This guide is intended for complete beginners and will explain the approach and techniques used.
 
 ### Challenge Description
 The **Agent Sudo** challenge is designed to test your skills in various areas of cybersecurity, including cryptography, steganography, and web exploitation.
@@ -27,8 +27,8 @@ Our approach to solving the challenge involves:
 #### Introduction to Linux
 If you never used Linux before it is important to understand the file structure of the operating system.  
 
-##### Understanding the Filesystem
-The Linux filesystem is hierarchical, starting from the root directory, denoted by `/`. Here are some key directories:
+##### Understanding and Traversing the Filesystem
+The Linux filesystem is hierarchical (like Windows), starting from the root directory, denoted by `/`. Here are some key directories:
 
 - `/bin`: Essential command binaries
 - `/etc`: Configuration files
@@ -37,7 +37,20 @@ The Linux filesystem is hierarchical, starting from the root directory, denoted 
 - `/usr`: User utilities and applications
 - `/root`: The home directory for the root user
 
-The root user, also known as the superuser, has administrative privileges and can perform any task on the system. This user is crucial for system maintenance and management.
+The root user, also known as the superuser, has administrative privileges and can perform any task on the system.
+
+the file system can be accessed through the file explorer similar to Windows and MacOS **OR** more commonly used the *terminal*. The commands to traverse and use the file system in the terminal is:
+- `ls`: Lists the contents of a directory.
+- `cd`: **C**hanges the current **d**irectory.
+- `pwd`: **P**rints the current **w**orking **d**irectory.
+- `mkdir`: **C**reates a new **d**irectory.
+- `rmdir`: **R**e**m**oves an empty **d**irectory.
+- `rm -r`: **R**e**m**oves a directory and its contents **r**ecursively.
+- `cp`: **C**o**p**ies files or directories.
+- `mv`: **M**o**v**es or renames files or directories.
+- `find`: Searches for files and directories.
+
+`cd` and `ls` are the most commonly used commands. `cd` 
 
 
 ### Conclusion
