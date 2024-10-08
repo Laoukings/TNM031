@@ -10,8 +10,7 @@ Welcome to the detailed and beginner friendly writeup for the **Agent Sudo** CTF
 1. [Introduction](#introduction)
 2. [Challenge Description](#challenge-description)
 3. [Methodology](#methodology)
-4. [Solution](#solution)
-5. [Conclusion](#conclusion)
+4. [Conclusion](#conclusion)
 
 ### Introduction
 In this writeup, we will explore the **Agent Sudo** challenge, breaking down each step to uncover the solution. This guide is intended for complete beginners to hacking and will explain the approach and techniques used.
@@ -25,10 +24,21 @@ Our approach to solving the challenge involves:
 - Applying relevant tools and techniques
 - Documenting each step for clarity
 
-### Solution
+#### Introduction to linux
+If you never used Linux before it is important to understand the file structure of the operating system.  
 
-## Introduction to linux 
-Detailed steps and commands used to solve the challenge will be provided here.
+##### Understanding the Filesystem
+The Linux filesystem is hierarchical, starting from the root directory, denoted by `/`. Here are some key directories:
+
+- `/bin`: Essential command binaries
+- `/etc`: Configuration files
+- `/home`: User home directories
+- `/var`: Variable data like logs
+- `/usr`: User utilities and applications
+- `/root`: The home directory for the root user
+
+The root user, also known as the superuser, has administrative privileges and can perform any task on the system. This user is crucial for system maintenance and management.
+
 
 ### Conclusion
 Summarizing the key takeaways and lessons learned from the challenge.
