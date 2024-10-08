@@ -2,7 +2,7 @@
 
 ## Capture The Flag (CTF) Challenge
 
-Welcome to the detailed and beginner friendly writeup for the **Agent Sudo** CTF challenge. This document will guide you through the steps and methodologies used to solve the challenge.
+Welcome to the detailed and beginner-friendly writeup for the **Agent Sudo** CTF challenge. This document will guide you through the steps and methodologies used to solve the challenge.
 
 ![CTF Logo](https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg)
 
@@ -13,7 +13,7 @@ Welcome to the detailed and beginner friendly writeup for the **Agent Sudo** CTF
 4. [Conclusion](#conclusion)
 
 ### Introduction
-In this writeup, we will explore the **Agent Sudo** challenge, breaking down each step to uncover the solution. This guide is intended for complete beginners to hacking and will explain the approach and techniques used.
+This writeup will explore the **Agent Sudo** challenge, breaking down each step to uncover the solution. This guide is intended for complete beginners to hacking and will explain the approach and techniques used.
 
 ### Challenge Description
 The **Agent Sudo** challenge is designed to test your skills in various areas of cybersecurity, including cryptography, steganography, and web exploitation.
@@ -24,7 +24,7 @@ Our approach to solving the challenge involves:
 - Applying relevant tools and techniques
 - Documenting each step for clarity
 
-#### Introduction to linux
+#### Introduction to Linux
 If you never used Linux before it is important to understand the file structure of the operating system.  
 
 ##### Understanding the Filesystem
