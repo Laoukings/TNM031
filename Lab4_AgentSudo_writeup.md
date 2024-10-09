@@ -109,6 +109,31 @@ hydra -l <username> -P /usr/share/wordlists/rockyou.txt <target-ip> <protocol>
 Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate values for your attack.
 
 
+**Enumarate**
+
+How many open ports?
+
+How you redirect yourself to a secret page?
+
+What is the agent name?
+
+**Hash-cracking and brute force**
+
+FTP password
+
+Zip-file password 
+
+Steg password
+
+Who is the other (agent in full name)?
+
+SSH Password
+
+**Capture the user flag**
+
+What is the user flag
+
+
 
 ### Conclusion
 Summarizing the key takeaways and lessons learned from the challenge.
