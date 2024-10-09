@@ -53,7 +53,7 @@ the file system can be accessed through the *file explorer* similar to Windows a
 
 `cd` and `ls` are the most commonly used commands. `cd` 
 
-#### Setting up Linux the Enviroment
+#### Setting up Linux the Enviroment (#setup)
 There are two ways of doing the challange. The first option is by using TryHackMe's provided virtual machine that is called AttackBox, which is free for 1 hour a day. The second option is to use your own install of Linux, such as Kali Linux, and use the VPN provided by TryHackMe to connect to the challage.
 
     ##### Accessing the AttackBox on TryHackMe
@@ -64,7 +64,40 @@ There are two ways of doing the challange. The first option is by using TryHackM
 
 #### Solution
 
-1. First, we are given the IP of the machine that we will attack.
+##### Task 1
+
+Task 1 requires the user to connect to the THM network using the steps in [setup]
+
+
+1. First, we are given the IP of the machine that we will attack in the THM network.  
+
+**Nmap** (**N**etwork **Map**per) is a powerful open-source tool used for network discovery and security auditing. It is widely used in network security to discover hosts and services on a computer network, thus creating a "map" of the network. Nmap can be used to:
+
+- Discover live hosts on a network.
+- Identify open ports on a target host.
+- Detect the operating system and services running on a host.
+- Perform vulnerability scanning.
+
+To use Nmap in the terminal, you can follow these basic steps:
+
+1. **Basic Host Discovery**: To find live hosts on a network, you can use the following command:
+    ```bash
+    nmap -sn <target-ip-range>
+    ```
+    Replace `<target-ip-range>` with the IP range you want to scan, e.g., `10.10.10.10`.
+
+2. **Port Scanning**: To scan for open ports on a specific host, use:
+    ```bash
+    nmap <target-ip>
+    ```
+    Replace `<target-ip>` with the IP address of the target machine.
+
+3. **Service and Version Detection**: To detect services and their versions running on open ports, use:
+    ```bash
+    nmap -sV <target-ip>
+    ```
+    This command will provide detailed information about the services running on the target machine.
+
 
 
 Hydra is a powerful and versatile password-cracking tool used in hacking. It supports numerous protocols, including HTTP, FTP, SSH, and many more, making it a usefull tool for brute force attacks. Hydra works by attempting to log in with various username and password combinations from a specified wordlist. Wordlists are essential tools in penetration testing and password cracking. One of the most popular wordlists is `rockyou.txt`, which contains millions of common passwords. This worldlist is often used with brute force attacks to guess the password on the attacked box. On the given AttackBox the wordlists can be accessed at `/usr/share/wordlists/rockyou.txt`. To use it with Hydra, you can specify the path in your command like so:
