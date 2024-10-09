@@ -112,7 +112,11 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 
 Nmap is an open source Linux command network scanning tool used for network exploration, host discovery, and security auditing.
 
-By letting nmap run by entering 'sudo nmap -sC -sV 'ip-adress' in the terminal window we get the following output:
+By letting nmap run by entering 
+    ```bash
+    nmap -sC -sV <ip-adress>
+    ```
+in the terminal window we get the following output:
 
 //Resultimages
 
@@ -144,7 +148,6 @@ SSH Password
 **Capture the user flag**
 
 What is the user flag
-
 
 
 ### Conclusion
