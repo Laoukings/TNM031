@@ -16,7 +16,13 @@ Welcome to the detailed and beginner-friendly writeup for the **Agent Sudo** CTF
 This writeup will explore the **Agent Sudo** challenge, breaking down each step to uncover the solution. This guide is intended for complete beginners and will explain the approach and techniques used.
 
 ### Challenge Description
-The **Agent Sudo** challenge is designed to test your skills in various areas of cybersecurity, including cryptography, steganography, and web exploitation.
+The **Agent Sudo** challenge is designed to test your skills in various areas of cybersecurity, including cryptography, steganography, and web exploitation. "You found a secret server located under the deep sea. Your task is to hack inside the server and reveal the truth."
+
+**Disclaimer-Do we want this???**
+This write-up is done for educational purpose. While understanding network vulnerabilities is crucial for improving security measures, 
+it is imperative to emphasize that exploiting these vulnerabilities without permission is unethical and illegal. 
+Ethical hacking, or penetration testing, is conducted with the consent of the system owner and focuses on enhancing security, 
+protecting data, and preventing malicious attacks.
 
 ### Methodology
 Our approach to solving the challenge involves:
