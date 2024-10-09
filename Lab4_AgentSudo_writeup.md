@@ -75,6 +75,18 @@ hydra -l <username> -P /usr/share/wordlists/rockyou.txt <target-ip> <protocol>
 
 Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate values for your attack.
 
+2. With the ip-adress of the machine given we can scan the network for additional information with Nmap. 
+
+Nmap is an open source Linux command network scanning tool used for network exploration, host discovery, and security auditing.
+
+By letting nmap run by entering 'sudo nmap -sC -sV 'ip-adress' in the terminal window we get the following output:
+
+//Resultimages
+
+The open ports are: 
+21/tcp open ftp
+22/tcp open ssh
+80/tcp open http
 
 **Enumarate**
 
