@@ -62,6 +62,18 @@ There are two ways of doing the challange. The first option is by using TryHackM
     ##### Accessing the Challage with your own Linux Machine
     To access the challenge with your own Linux machine, you need to connect to TryHackMe's network using a VPN. First, download the OpenVPN configuration file from the TryHackMe website. Then, use the `openvpn` command to connect: `sudo openvpn --config <path-to-config-file>`. Once connected, you can access the challenge environment as if you were using the AttackBox. The required tools might possibly not be installed but are easily installed if needed. 
 
+#### Solution
+
+1. First, we are given the IP of the machine that we will attack.
+
+
+Hydra is a powerful and versatile password-cracking tool used in hacking. It supports numerous protocols, including HTTP, FTP, SSH, and many more, making it a usefull tool for brute force attacks. Hydra works by attempting to log in with various username and password combinations from a specified wordlist. Wordlists are essential tools in penetration testing and password cracking. One of the most popular wordlists is `rockyou.txt`, which contains millions of common passwords. This worldlist is often used with brute force attacks to guess the password on the attacked box. On the given AttackBox the wordlists can be accessed at `/usr/share/wordlists/rockyou.txt`. To use it with Hydra, you can specify the path in your command like so:
+
+```bash
+hydra -l <username> -P /usr/share/wordlists/rockyou.txt <target-ip> <protocol>
+```
+
+Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate values for your attack.
 
 
 
