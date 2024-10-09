@@ -112,7 +112,7 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 
 Nmap is an open source Linux command network scanning tool used for network exploration, host discovery, and security auditing.
 
-By letting nmap run by entering 
+By letting nmap run by entering: 
     ```bash
     nmap -sC -sV <ip-adress>
     ```
@@ -121,9 +121,15 @@ in the terminal window we get the following output:
 //Resultimages
 
 The open ports are: 
-21/tcp open ftp
-22/tcp open ssh
-80/tcp open http
+- 21/tcp open ftp
+- 22/tcp open ssh
+- 80/tcp open http
+
+The CTF Challenge consists of three topics with questions regarding each topic. The topics are:
+-Enumarate
+-Hash-cracking and brute force
+-Capture the flag
+
 
 **Enumarate**
 
@@ -135,19 +141,19 @@ What is the agent name?
 
 **Hash-cracking and brute force**
 
-FTP password
+What is the FTP password?
 
-Zip-file password 
+What is the Zip-file password?
 
-Steg password
+What is the Steg password?
 
 Who is the other (agent in full name)?
 
-SSH Password
+What is the SSH Password?
 
 **Capture the user flag**
 
-What is the user flag
+What is the user flag?
 
 
 ### Conclusion
