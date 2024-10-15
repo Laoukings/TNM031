@@ -88,6 +88,10 @@ We are given the IP of the machine that we will attack in the THM network, it is
 
 To find out how many ports are open we use Nmap. 
 
+<details>
+<summary>What is Nmap?</summary>
+
+
 **Nmap** (**N**etwork **Map**per) is a powerful open-source tool used for network discovery and security auditing. It is widely used in network security to discover hosts, services and what program version of the devices on the network, thus creating a "map"  of the network. Nmap can be used to:
 
 - Discover live hosts on a network.
@@ -114,8 +118,13 @@ To use Nmap in the terminal, you can follow these basic steps:
     nmap -sV <target-ip>
     ```
     This command will provide detailed information about the services running on the target machine.
+</details>
 
-In our case, we want to use the most basic port scanning and therefore use the third option. Running this command gives us the following result:
+In our case, we want to use the most basic port scanning and therefore use 
+    ```bash
+    nmap <target-ip>
+    ```
+Running this command gives us the following result:
 
 ![Nmap scan](g9ynv9p0xuj71.png)
 
@@ -127,11 +136,9 @@ When we scanned for open ports we noticed that there is a web server running on 
 
 ![Web browser user agent](g9ynv9p0xuj71.png)
 
+Agent R tells us to use our codename to access the website. We don't have a codename but we know how to impersonate Agent R with `user-agent`.  
 
-Agent R tells us to use our codename to access the website. We don't have a code name but we know how to impersonate our agent with `user-agent`.  
-
-
-<details open>
+<details>
   <summary>What is user-agent?</summary>
 
 A **User-Agent** in a web browser is a string of text that the browser sends to a web server when making an HTTP request. It provides the server with essential information about the browser, the device, and the operating system being used by the client. This helps the server deliver a version of the website optimized for the specific browser or device.
@@ -145,7 +152,28 @@ A typical user-agent string contains several components:
 - **Device type**: Specifies the type of device being used, such as mobile, desktop, or tablet.
 </details>
 
-Because 
+There are different ways we can change our `user-agent` to impersonate/spoof Agent R. We can use a browser extension, the terminal or change it manually. For this write-up, we will use the  `curl` command in the Terminal.
+
+<details>
+    <summary>What is curl?</summary>
+    `curl` (short for **c**lient **u**rl) is a command-line tool used to transfer data to or from a server, using various supported protocols like HTTP, HTTPS, FTP, and more. It is an effective tool that is often used for interacting with web servers, APIs, downloading files, and troubleshooting network issues.
+
+The curl command:
+```bash
+curl <options> <target-ip>
+```
+The options needed:
+1. **`-A <user-agent>`** Set a custom User-Agent string (e.g., `curl -A "Mozilla/5.0" https://youtube.com`).
+2. **`-L`**  Follow redirects (e.g., `curl -L https://youtube.com`).
+
+</details>
+
+We run the command with the user-agent `-A` as Agent **R** and redirects enabled `-L`:
+    ```bash
+    Curl -A "R" -L <target-ip>
+    ```
+
+![user-agent-res](g9ynv9p0xuj71.png)
 
 
 Hydra is a powerful and versatile password-cracking tool used in hacking. It supports numerous protocols, including HTTP, FTP, SSH, and many more, making it a useful tool for brute force attacks. Hydra works by attempting to log in with various username and password combinations from a specified wordlist. Wordlists are essential tools in penetration testing and password cracking. One of the most popular wordlists is `rockyou.txt`, which contains millions of common passwords. This worldlist is often used with brute force attacks to guess the password on the attacked box. On the given AttackBox the wordlists can be accessed at `/usr/share/wordlists/rockyou.txt`. To use it with Hydra, you can specify the path in your command like so:
