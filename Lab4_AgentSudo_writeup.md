@@ -119,15 +119,33 @@ In our case, we want to use the most basic port scanning and therefore use the t
 
 ![Nmap scan](g9ynv9p0xuj71.png)
 
+We can see that there are **3 ports open**: FTP, SSH and HTTP. 
+
+#### How do you redirect yourself to a secret page?
+
+When we scanned for open ports we noticed that there is a web server running on port 80. Opening the IP address in our web browser gives us:
+
+![Web browser user agent](g9ynv9p0xuj71.png)
 
 
+Agent R tells us to use our codename to access the website. We don't have a code name but we know how to impersonate our agent with `user-agent`.  
 
 
+<details open>
+  <summary>What is user-agent?</summary>
 
+A **User-Agent** in a web browser is a string of text that the browser sends to a web server when making an HTTP request. It provides the server with essential information about the browser, the device, and the operating system being used by the client. This helps the server deliver a version of the website optimized for the specific browser or device.
 
+## Structure of a User-Agent String
 
+A typical user-agent string contains several components:
+- **Browser name and version**: Identifies the web browser being used, such as Chrome, Firefox, or Safari.
+- **Operating system**: Describes the platform, such as Windows, macOS, Linux, Android, or iOS.
+- **Rendering engine**: Indicates the browser engine, like WebKit (Safari), Gecko (Firefox), or Blink (Chrome).
+- **Device type**: Specifies the type of device being used, such as mobile, desktop, or tablet.
+</details>
 
-
+Because 
 
 
 Hydra is a powerful and versatile password-cracking tool used in hacking. It supports numerous protocols, including HTTP, FTP, SSH, and many more, making it a useful tool for brute force attacks. Hydra works by attempting to log in with various username and password combinations from a specified wordlist. Wordlists are essential tools in penetration testing and password cracking. One of the most popular wordlists is `rockyou.txt`, which contains millions of common passwords. This worldlist is often used with brute force attacks to guess the password on the attacked box. On the given AttackBox the wordlists can be accessed at `/usr/share/wordlists/rockyou.txt`. To use it with Hydra, you can specify the path in your command like so:
