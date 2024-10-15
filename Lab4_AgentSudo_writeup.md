@@ -10,7 +10,8 @@ Welcome to the detailed and beginner-friendly writeup for the **Agent Sudo** CTF
 1. [Introduction](#introduction)
 2. [Challenge Description](#challenge-description)
 3. [Methodology](#methodology)
-4. [Conclusion](#conclusion)
+4. [Solution](#solution)
+5. [Conclusion](#conclusion)
 
 ### Introduction
 This writeup will explore the **Agent Sudo** challenge, breaking down each step to uncover the solution. This guide is intended for complete beginners and will explain the approach and techniques used.
@@ -64,8 +65,8 @@ the file system can be accessed through the *file explorer* similar to Windows a
 
 `cd` and `ls` are the most commonly used commands. `cd` 
 
-#### Setting up the Linux Environment 
-There are two ways of doing the challange. The first option is by using TryHackMe's provided virtual machine that is called AttackBox, which is free for 1 hour a day. The second option is to use your own install of Linux, such as Kali Linux, and use the VPN provided by TryHackMe to connect to the challage.
+### Setting up the Linux Environment 
+There are two ways of doing the challange. The first option is by using TryHackMe's provided virtual machine that is called AttackBox, which is free for 1 hour a day. The second option is to use your own install of Linux, such as Kali Linux, and use the VPN provided by TryHackMe to connect to the challenge.
 
 ##### Accessing the AttackBox on TryHackMe
 To access the AttackBox on TryHackMe, navigate to the **Agent Sudo** room. Look for the "Start AttackBox" button, usually located on the left side of the interface. Click this button to initiate the AttackBox. The AttackBox is a virtual machine provided by TryHackMe for conducting your tasks. Once the AttackBox is running, you can interact with it directly through your browser, the tools required to complete the challage are pre-installed.
@@ -79,10 +80,15 @@ To access the challenge with your own Linux machine, you need to connect to TryH
 
 Follow the steps in [setup](#Setting-up-the-Linux-Environment)
 
+### Task 2: **Enumerate**
 
-1. First, we are given the IP of the machine that we will attack in the THM network.  
+We are given the IP of the machine that we will attack in the THM network, it is usually `10.10.x.x`. It is recommended to document all your findings in a text file.  
 
-**Nmap** (**N**etwork **Map**per) is a powerful open-source tool used for network discovery and security auditing. It is widely used in network security to discover hosts, services and what program version of the devices on the network, thus creating a "map" (often called fingerprint) of the network. Nmap can be used to:
+#### Question: How many open ports?
+
+To find out how many ports are open we use Nmap. 
+
+**Nmap** (**N**etwork **Map**per) is a powerful open-source tool used for network discovery and security auditing. It is widely used in network security to discover hosts, services and what program version of the devices on the network, thus creating a "map"  of the network. Nmap can be used to:
 
 - Discover live hosts on a network.
 - Identify open ports on a target host.
@@ -108,6 +114,19 @@ To use Nmap in the terminal, you can follow these basic steps:
     nmap -sV <target-ip>
     ```
     This command will provide detailed information about the services running on the target machine.
+
+In our case, we want to use the most basic port scanning and therefore use the third option. Running this command gives us the following result:
+
+![Nmap scan]()
+
+
+
+
+
+
+
+
+
 
 
 
