@@ -120,10 +120,11 @@ To use Nmap in the terminal, you can follow these basic steps:
     This command will provide detailed information about the services running on the target machine.
 </details>
 
-In our case, we want to use the most basic port scanning and therefore use 
-    ```bash
-    nmap <target-ip>
-    ```
+In our case, we want to use the most basic port scanning and therefore use
+```bash
+nmap <target-ip>
+```
+
 Running this command gives us the following result:
 
 ![Nmap scan](g9ynv9p0xuj71.png)
@@ -169,9 +170,10 @@ The options needed:
 </details>
 
 We run the command with the user-agent `-A` as Agent **R** and redirects enabled `-L`:
-    ```bash
-    Curl -A "R" -L <target-ip>
-    ```
+
+```bash
+curl -A "R" -L <target-ip>
+```
 
 ![user-agent-res](g9ynv9p0xuj71.png)
 
