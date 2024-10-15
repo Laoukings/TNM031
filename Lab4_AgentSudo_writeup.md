@@ -66,12 +66,12 @@ the file system can be accessed through the *file explorer* similar to Windows a
 `cd` and `ls` are the most commonly used commands. `cd` 
 
 ### Setting up the Linux Environment 
-There are two ways of doing the challange. The first option is by using TryHackMe's provided virtual machine that is called AttackBox, which is free for 1 hour a day. The second option is to use your own install of Linux, such as Kali Linux, and use the VPN provided by TryHackMe to connect to the challenge.
+There are two ways of doing the challenge. The first option is by using TryHackMe's provided virtual machine which is called AttackBox, which is free for 1 hour a day. The second option is to use your own install of Linux, such as Kali Linux, and use the VPN provided by TryHackMe to connect to the challenge.
 
 ##### Accessing the AttackBox on TryHackMe
-To access the AttackBox on TryHackMe, navigate to the **Agent Sudo** room. Look for the "Start AttackBox" button, usually located on the left side of the interface. Click this button to initiate the AttackBox. The AttackBox is a virtual machine provided by TryHackMe for conducting your tasks. Once the AttackBox is running, you can interact with it directly through your browser, the tools required to complete the challage are pre-installed.
+To access the AttackBox on TryHackMe, navigate to the **Agent Sudo** room. Look for the "Start AttackBox" button, usually located on the left side of the interface. Click this button to initiate the AttackBox. The AttackBox is a virtual machine provided by TryHackMe for conducting your tasks. Once the AttackBox is running, you can interact with it directly through your browser, the tools required to complete the challenge are pre-installed.
 
-##### Accessing the Challage with your own Linux Machine
+##### Accessing the challenge with your own Linux Machine
 To access the challenge with your own Linux machine, you need to connect to TryHackMe's network using a VPN. First, download the OpenVPN configuration file from the TryHackMe website. Then, use the `openvpn` command to connect: `sudo openvpn --config <path-to-config-file>`. Once connected, you can access the challenge environment as if you were using the AttackBox. The required tools might not be installed but are easily installed if needed. 
 
 #### Solution
@@ -137,7 +137,7 @@ When we scanned for open ports we noticed that there is a web server running on 
 
 ![Web browser user agent](g9ynv9p0xuj71.png)
 
-Agent R tells us to use our codename to access the website. We don't have a codename but we know how to impersonate Agent R with `user-agent`.  
+Agent R tells us to use our codename to access the website. We don't have a codename but we know how to impersonate Agent R with `user-agent`. 
 
 <details>
   <summary>What is user-agent?</summary>
@@ -153,11 +153,15 @@ A typical user-agent string contains several components:
 - **Device type**: Specifies the type of device being used, such as mobile, desktop, or tablet.
 </details>
 
+Therefore, the answer to the question "How do you redirect yourself to a secret page?" is **user-agent**. 
+
+#### What is the agent's name?
+
 There are different ways we can change our `user-agent` to impersonate/spoof Agent R. We can use a browser extension, the terminal or change it manually. For this write-up, we will use the  `curl` command in the Terminal.
 
 <details>
     <summary>What is curl?</summary>
-    `curl` (short for **c**lient **u**rl) is a command-line tool used to transfer data to or from a server, using various supported protocols like HTTP, HTTPS, FTP, and more. It is an effective tool that is often used for interacting with web servers, APIs, downloading files, and troubleshooting network issues.
+`curl` (short for **c**lient **url**) is a command-line tool used to transfer data to or from a server, using various supported protocols like HTTP, HTTPS, FTP, and more. It is an effective tool that is often used for interacting with web servers, APIs, downloading files, and troubleshooting network issues.
 
 The curl command:
 ```bash
@@ -176,6 +180,15 @@ curl -A "R" -L <target-ip>
 ```
 
 ![user-agent-res](g9ynv9p0xuj71.png)
+
+We see that there are 25 different agents but Agent R was not correct. there are 26 letters in the alphabet so we assume the agent names start at A. Therefore, We try again with Agent A but we get the same result as Agent R. We repeat until we find Agent C and we get:
+
+![Agent C](g9ynv9p0xuj71.png)
+
+Here we can see that our Agent is named: **Chris** which is our answer to the last question in Task 2. 
+
+
+### Task 3: Hash cracking and brute-force
 
 
 Hydra is a powerful and versatile password-cracking tool used in hacking. It supports numerous protocols, including HTTP, FTP, SSH, and many more, making it a useful tool for brute force attacks. Hydra works by attempting to log in with various username and password combinations from a specified wordlist. Wordlists are essential tools in penetration testing and password cracking. One of the most popular wordlists is `rockyou.txt`, which contains millions of common passwords. This worldlist is often used with brute force attacks to guess the password on the attacked box. On the given AttackBox the wordlists can be accessed at `/usr/share/wordlists/rockyou.txt`. To use it with Hydra, you can specify the path in your command like so:
