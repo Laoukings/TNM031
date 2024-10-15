@@ -160,7 +160,8 @@ Therefore, the answer to the question "How do you redirect yourself to a secret 
 There are different ways we can change our `user-agent` to impersonate/spoof Agent R. We can use a browser extension, the terminal or change it manually. For this write-up, we will use the  `curl` command in the Terminal.
 
 <details>
-    <summary>What is curl?</summary>
+<summary>What is curl?</summary>
+    
 `curl` (short for **c**lient **url**) is a command-line tool used to transfer data to or from a server, using various supported protocols like HTTP, HTTPS, FTP, and more. It is an effective tool that is often used for interacting with web servers, APIs, downloading files, and troubleshooting network issues.
 
 The curl command:
@@ -190,7 +191,8 @@ Here we can see that our Agent is named: **Chris** which is our answer to the la
 
 ### Task 3: Hash cracking and brute-force
 
-
+<details>
+    <summary>What is Hydra?</summary>
 Hydra is a powerful and versatile password-cracking tool used in hacking. It supports numerous protocols, including HTTP, FTP, SSH, and many more, making it a useful tool for brute force attacks. Hydra works by attempting to log in with various username and password combinations from a specified wordlist. Wordlists are essential tools in penetration testing and password cracking. One of the most popular wordlists is `rockyou.txt`, which contains millions of common passwords. This worldlist is often used with brute force attacks to guess the password on the attacked box. On the given AttackBox the wordlists can be accessed at `/usr/share/wordlists/rockyou.txt`. To use it with Hydra, you can specify the path in your command like so:
 
 ```bash
@@ -198,6 +200,8 @@ hydra -l <username> -P /usr/share/wordlists/rockyou.txt <target-ip> <protocol>
 ```
 
 Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate values for your attack.
+
+</details>
 
 2. With the IP address of the machine given we can scan the network for additional information with Nmap. 
 
