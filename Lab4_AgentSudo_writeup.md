@@ -236,7 +236,6 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 ![hi_james_txt](image15.png)
 ![james](image16.png)
 ![flag](image17.png)
-![server_hosting](image18.png)
 ![alien_autospy](image19.png)
 ![alienimage](image20.png)
 ![sudo-privilage](image21.png)
