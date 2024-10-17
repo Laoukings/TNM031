@@ -222,13 +222,13 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 
 </details>
 
-![user-agent-res](image4.png)
-![user-agent-res](image5.png)
-![user-agent-res](image6.png)
-![user-agent-res](image7.png)
-![user-agent-res](image8.png)
-![user-agent-res](image9.png)
-![user-agent-res](image10.png)
+![hydra_crystal](image4.png)
+![transfer_files](image5.png)
+![downloading](image6.png)
+![To_agentJ_txt](image7.png)
+![zipping](image8.png)
+![to_agentR_txt](image9.png)
+![cutie_png_extracted](image10.png)
 ![password](image11.png)
 ![base64_decode](image12.png)
 ![steghide_cute_alien](image13.png)
@@ -239,7 +239,10 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 ![server_hosting](image18.png)
 ![alien_autospy](image19.png)
 ![alienimage](image20.png)
-![sudo](image3.png) 2. With the IP address of the machine given we can scan the network for additional information with Nmap.
+![sudo-privilage](image21.png)
+![mr.hacker](image22.png)
+
+2. With the IP address of the machine given we can scan the network for additional information with Nmap.
 
 Nmap is an open-source Linux command network scanning tool used for network exploration, host discovery, and security auditing.
 
