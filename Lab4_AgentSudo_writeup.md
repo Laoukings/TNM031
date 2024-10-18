@@ -206,6 +206,7 @@ curl -A "R" -L <target-ip>
 
 
 Here we can see that our Agent is named: **Chris** which is our answer to the last question in Task 2.
+We also note that the FTP password is weak which means that we could try to bruteforce this using hydra.
 
 ### Task 3: Hash cracking and brute-force
 
@@ -223,18 +224,32 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 
 #### Question: What is the FTP password?
 
+By letting hydra run for som time it gives gives us the password: crystal which will be our answer to the first question of Task 3.
+
+
 ![hydra_crystal](image4.png)
-
-By letting hydra run for som time it gives gives us the pass word: crystal which will be our answer to the first question of Task 3.
-
-![transfer_files](image5.png)
 
 Entering the ftp password crystal gives us:
 
+![transfer_files](image5.png)
+
+Now we would like to see the content of the FTP server. By entering the command ls in the current directory of the FTP server we list all files and directories.
+The content of the FTP server:
 
 ![downloading](image6.png)
+
+We can see the listed files of the FTP server as:
+To_agentJ.txt
+cute-alien.jpg
+cutie.png
+
+Opening up the text file: To_agentJ.txt:
 ![To_agentJ_txt](image7.png)
+
+Bin walk explanation
 ![zipping](image8.png)
+
+
 ![to_agentR_txt](image9.png)
 ![cutie_png_extracted](image10.png)
 ![password](image11.png)
