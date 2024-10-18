@@ -222,8 +222,13 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 
 </details>
 
+#### Question: What is the FTP password?
+
 ![hydra_crystal](image4.png)
+
 ![transfer_files](image5.png)
+
+
 ![downloading](image6.png)
 ![To_agentJ_txt](image7.png)
 ![zipping](image8.png)
@@ -235,6 +240,11 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 ![message_txt](image14.png)
 ![hi_james_txt](image15.png)
 ![james](image16.png)
+
+### Task 4: **Capture the flag**
+
+What is the user flag?
+
 ![flag](image17.png)
 ![alien_autospy](image19.png)
 ![alienimage](image20.png)
