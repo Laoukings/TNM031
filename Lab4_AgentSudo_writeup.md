@@ -243,10 +243,21 @@ To_agentJ.txt
 cute-alien.jpg
 cutie.png
 
-Opening up the text file: To_agentJ.txt:
+Opening up the text file: To_agentJ.txt gives us the following information :
 ![To_agentJ_txt](image7.png)
 
-Bin walk explanation
+<details>
+<summary>Binwalk</summary>
+
+binwalk is a Linux command-line tool designed for analyzing and extracting data from binary files, particularly firmware images. It allows users to examine the contents of these binaries to identify file signatures, extract embedded files, and disassemble code.
+The binwalk command:
+
+```bash
+binwalk <binwalk> <cutie.png>
+```
+
+</details>
+
 ![zipping](image8.png)
 
 
