@@ -250,7 +250,7 @@ Opening up the text file: To_agentJ.txt gives us the following information :
 Our next two question wants a Zip-file password which we do not have aswell as a steg password, this could mean that there is a hidden Zip-file in the files we downloaded. 
 To extract data from binary files we could use the command `binwalk`. The text file To_agentJ above said that: "Your login password is somehow stored in the fake image". We start off using `binwalk`on cutie.png: 
 <details>
-<summary>Binwalk</summary>
+<summary>What is Binwalk?</summary>
 
 binwalk is a Linux command-line tool designed for analyzing and extracting data from binary files, particularly firmware images. It allows users to examine the contents of these binaries to identify file signatures, extract embedded files, and disassemble code.
 The binwalk command:
@@ -267,8 +267,24 @@ Listing the files in the extracted file gives us:
 
 ![to_agentR_txt](image9.png)
 
-The Zip-file is encrypted. But we can get the password by using zip2john and then use john to crack the hash.
+The Zip-file name is 8702.zip and it is encrypted. But we can get the password by using `zip2john`and then use `john`to crack the hash.
+<details>
+<summary>What does zip2john & john do?</summary>
 
+zip2john is a utility that is part of the John the Ripper password cracking suite. It is used to convert ZIP archive files into a format that can be processed by John the Ripper. This tool extracts password hashes from ZIP files, allowing users to attempt to crack the passwords using John the Ripper.
+
+```bash
+binwalk <zip2john> <targeted-zip> > <zip.hash>
+```
+
+john, or John the Ripper, is a powerful password cracking tool that supports various hashing algorithms and formats. It is commonly used to recover lost passwords or to perform security audits by attempting to crack password hashes. John can use various attack modes, including dictionary attacks and brute-force attacks, to find the original passwords.
+
+```bash
+binwalk <john> <zip.hash>
+```
+
+
+</details>
 
 ![cutie_png_extracted](image10.png)
 ![password](image11.png)
