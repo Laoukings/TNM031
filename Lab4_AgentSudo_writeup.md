@@ -274,21 +274,31 @@ The Zip-file name is 8702.zip and it is encrypted. But we can get the password b
 zip2john is a utility that is part of the John the Ripper password cracking suite. It is used to convert ZIP archive files into a format that can be processed by John the Ripper. This tool extracts password hashes from ZIP files, allowing users to attempt to crack the passwords using John the Ripper.
 
 ```bash
-binwalk <zip2john> <targeted-zip> > <zip.hash>
+zip2john <targeted-zipfile> > <zip.hash>
 ```
 
 john, or John the Ripper, is a powerful password cracking tool that supports various hashing algorithms and formats. It is commonly used to recover lost passwords or to perform security audits by attempting to crack password hashes. John can use various attack modes, including dictionary attacks and brute-force attacks, to find the original passwords.
 
 ```bash
-binwalk <john> <zip.hash>
+john <zip.hash>
 ```
-
 
 </details>
 
 ![cutie_png_extracted](image10.png)
+
+Extracting the zip with the use of 7-zip gives us the text file `To_agentR.txt`. The text file contains a word: `QXJIYTUx`
+
+```bash
+7z e <targeted-zipfile>
+```
+
 ![password](image11.png)
+
+`QXJIYTUx` is encoded. Decoding this by base64 gives us the following:
+
 ![base64_decode](image12.png)
+
 ![steghide_cute_alien](image13.png)
 ![message_txt](image14.png)
 ![hi_james_txt](image15.png)
@@ -304,7 +314,6 @@ What is the user flag?
 ![sudo-privilage](image21.png)
 ![mr.hacker](image22.png)
 
-2. With the IP address of the machine given we can scan the network for additional information with Nmap.
 
 **Enumarate**
 
