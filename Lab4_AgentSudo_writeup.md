@@ -233,7 +233,7 @@ Entering the ftp password crystal gives us:
 
 ![transfer_files](image5.png)
 
-Now we would like to see the content of the FTP server. By entering the command ls in the current directory of the FTP server we list all files and directories.
+Now we would like to see the content of the FTP server. By entering the command ls in the current directory of the FTP server we list all files and directories and download them all. 
 The content of the FTP server:
 
 ![downloading](image6.png)
@@ -244,8 +244,11 @@ cute-alien.jpg
 cutie.png
 
 Opening up the text file: To_agentJ.txt gives us the following information :
+
 ![To_agentJ_txt](image7.png)
 
+Our next two question wants a Zip-file password which we do not have aswell as a steg password, this could mean that there is a hidden Zip-file in the files we downloaded. 
+To extract data from binary files we could use the command `binwalk`. 
 <details>
 <summary>Binwalk</summary>
 
