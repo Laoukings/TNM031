@@ -303,9 +303,22 @@ Extracting the zip with the use of 7-zip gives us the text file `To_agentR.txt`.
 
 This gives us our answer to our qustion: `area51`
 
+#### Question: What is the Steg password?
+
+Steghide is often used to hide information inside a jpg file. Testing this on cute-alien.jpg leads us to:
+
+```bash
+steghide <info> <targeted-imagefile>
+```
+<details>
+<summary>What is steghide?</summary>
+
+steghide is a command-line utility used for hiding data within various types of media files, such as images and audio files. It implements steganography, a technique that allows users to conceal information in plain sight, making it difficult to detect.
+</details>
+
+
 ![steghide_cute_alien](image13.png)
 
-#### Question: What is the Steg password?
 #### Question: Who is the other (agent in full name)?
 
 
