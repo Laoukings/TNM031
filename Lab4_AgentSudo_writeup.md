@@ -248,7 +248,7 @@ Opening up the text file: To_agentJ.txt gives us the following information :
 ![To_agentJ_txt](image7.png)
 
 Our next two question wants a Zip-file password which we do not have aswell as a steg password, this could mean that there is a hidden Zip-file in the files we downloaded. 
-To extract data from binary files we could use the command `binwalk`. 
+To extract data from binary files we could use the command `binwalk`. The text file To_agentJ above said that: "Your login password is somehow stored in the fake image". We start off using `binwalk`on cutie.png: 
 <details>
 <summary>Binwalk</summary>
 
@@ -263,9 +263,13 @@ binwalk <binwalk> <cutie.png>
 
 ![zipping](image8.png)
 
-Extracting 
+Listing the files in the extracted file gives us: 
 
 ![to_agentR_txt](image9.png)
+
+The Zip-file is encrypted. But we can get the password by using zip2john and then use john to crack the hash.
+
+
 ![cutie_png_extracted](image10.png)
 ![password](image11.png)
 ![base64_decode](image12.png)
