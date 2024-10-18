@@ -305,7 +305,7 @@ This gives us our answer to our qustion: `area51`
 
 #### Question: What is the Steg password?
 
-Steghide is often used to hide information inside a jpg file. Testing this on cute-alien.jpg leads us to:
+Steghide is often used to hide information inside a jpg file. Testing this on cute-alien.jpg with the command steghide info will tell us if the jpg has something to hide: 
 
 ```bash
 steghide <info> <targeted-imagefile>
@@ -318,6 +318,8 @@ steghide is a command-line utility used for hiding data within various types of 
 
 
 ![steghide_cute_alien](image13.png)
+
+With steghide info and entering the passphrase we get `embedded file "message.txt"`
 
 #### Question: Who is the other (agent in full name)?
 
@@ -338,7 +340,7 @@ What is the user flag?
 
 ![flag](image17.png)
 
-### Task 5 **Privilage escalation**
+### Task 5: **Privilage escalation**
 
 ![alien_autospy](image19.png)
 ![alienimage](image20.png)
