@@ -295,9 +295,13 @@ Extracting the zip with the use of 7-zip gives us the text file `To_agentR.txt`.
 
 ![password](image11.png)
 
+#### Question: What is the Steghide password?
+
 `QXJIYTUx` is encoded. Decoding this by base64 gives us the following:
 
 ![base64_decode](image12.png)
+
+This gives us our answer to our qustion: `area51`
 
 ![steghide_cute_alien](image13.png)
 ![message_txt](image14.png)
@@ -315,13 +319,7 @@ What is the user flag?
 ![mr.hacker](image22.png)
 
 
-**Enumarate**
 
-How many open ports?
-
-How you redirect yourself to a secret page?
-
-What is the agent name?
 
 **Hash-cracking and brute force**
 
