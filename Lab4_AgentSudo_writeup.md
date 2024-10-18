@@ -344,23 +344,6 @@ What is the user flag?
 
 
 
-
-**Hash-cracking and brute force**
-
-What is the FTP password?
-
-What is the Zip-file password?
-
-What is the Steg password?
-
-Who is the other (agent in full name)?
-
-What is the SSH Password?
-
-**Capture the user flag**
-
-What is the user flag?
-
 ### Conclusion
 
 Summarizing the key takeaways and lessons learned from the challenge.
