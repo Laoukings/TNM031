@@ -154,6 +154,8 @@ When we scanned for open ports we noticed that there is a web server running on 
 ![Web browser user agent](image2.png)
 
 Agent R tells us to use our codename to access the website. We don't have a codename but we know how to impersonate Agent R with `user-agent`.
+We see that there are 25 different agents but Agent R was not correct. there are 26 letters in the alphabet so we assume the agent names start at A. Therefore, We try again with Agent A but we get the same result as Agent R. We repeat until we find Agent C and we get:
+
 
 <details>
   <summary>What is user-agent?</summary>
@@ -202,9 +204,6 @@ curl -A "R" -L <target-ip>
 
 ![user-agent-res](image3.png)
 
-We see that there are 25 different agents but Agent R was not correct. there are 26 letters in the alphabet so we assume the agent names start at A. Therefore, We try again with Agent A but we get the same result as Agent R. We repeat until we find Agent C and we get:
-
-![Agent C](image4.png)
 
 Here we can see that our Agent is named: **Chris** which is our answer to the last question in Task 2.
 
@@ -226,7 +225,11 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 
 ![hydra_crystal](image4.png)
 
+By letting hydra run for som time it gives gives us the pass word: crystal which will be our answer to the first question of Task 3.
+
 ![transfer_files](image5.png)
+
+Entering the ftp password crystal gives us:
 
 
 ![downloading](image6.png)
