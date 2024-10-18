@@ -263,6 +263,7 @@ binwalk <binwalk> <cutie.png>
 
 ![zipping](image8.png)
 
+Extracting 
 
 ![to_agentR_txt](image9.png)
 ![cutie_png_extracted](image10.png)
@@ -284,27 +285,6 @@ What is the user flag?
 ![mr.hacker](image22.png)
 
 2. With the IP address of the machine given we can scan the network for additional information with Nmap.
-
-Nmap is an open-source Linux command network scanning tool used for network exploration, host discovery, and security auditing.
-
-By letting Nmap run by entering:
-`bash
-    nmap -sC -sV <ip-adress>
-    `
-in the terminal window, we get the following output:
-
-//Resultimages
-
-The open ports are:
-
-- 21/tcp open ftp
-- 22/tcp open ssh
-- 80/tcp open http
-
-The CTF Challenge consists of three topics with questions regarding each topic. The topics are:
--Enumarate
--Hash-cracking and brute force
--Capture the flag
 
 **Enumarate**
 
