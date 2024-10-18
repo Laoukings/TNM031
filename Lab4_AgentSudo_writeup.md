@@ -306,9 +306,17 @@ This gives us our answer to our qustion: `area51`
 ![steghide_cute_alien](image13.png)
 
 #### Question: What is the Steg password?
+#### Question: Who is the other (agent in full name)?
+
 
 ![message_txt](image14.png)
+
+Opening the contents of this textfile gives us:
+
 ![hi_james_txt](image15.png)
+
+This gives us both the steg password `hackerrules` and the other agents full name `James` as answers to our questions above.
+
 ![james](image16.png)
 
 ### Task 4: **Capture the flag**
