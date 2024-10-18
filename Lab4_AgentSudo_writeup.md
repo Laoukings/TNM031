@@ -295,7 +295,7 @@ Extracting the zip with the use of 7-zip gives us the text file `To_agentR.txt`.
 
 ![password](image11.png)
 
-#### Question: What is the Steghide password?
+#### Question: What is the Zip-file password?
 
 `QXJIYTUx` is encoded. Decoding this by base64 gives us the following:
 
@@ -304,6 +304,9 @@ Extracting the zip with the use of 7-zip gives us the text file `To_agentR.txt`.
 This gives us our answer to our qustion: `area51`
 
 ![steghide_cute_alien](image13.png)
+
+#### Question: What is the Steg password?
+
 ![message_txt](image14.png)
 ![hi_james_txt](image15.png)
 ![james](image16.png)
