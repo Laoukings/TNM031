@@ -337,6 +337,9 @@ This gives us both the steg password `hackerrules` and the other agents full nam
 What is the user flag?
 
 ![flag](image17.png)
+
+### Task 5 **Privilage escalation**
+
 ![alien_autospy](image19.png)
 ![alienimage](image20.png)
 ![sudo-privilage](image21.png)
