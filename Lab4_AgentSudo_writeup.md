@@ -339,7 +339,7 @@ This gives us both the steg password `hackerrules` and the other agents full nam
 
 ### Task 4: **Capture the flag**
 
-What is the user flag?
+#### Question: What is the user flag?
 
 We can here use the SSH information to get in to James machine and view the files :
 
@@ -360,6 +360,9 @@ alien_autospy.jpg:
 We are interested in knowing the sudo verion. We can simply check the sudo version with `sudo --version`.
 
 ![sudo-privilage](image21.png)
+
+The sudo version is 1.8.21 and we need to figure out if we somehow can exploit this.
+
 ![mr.hacker](image22.png)
 
 
