@@ -332,11 +332,15 @@ Opening the contents of this textfile gives us:
 
 This gives us both the steg password `hackerrules` and the other agents full name `James` as answers to our questions above.
 
-![james](image16.png)
-
 ### Task 4: **Capture the flag**
 
 What is the user flag?
+
+We can here use the SSH information to get in to James machine and view the files :
+
+![james](image16.png)
+
+If we then use the command `cat` we can view the contents of `user_flag.txt` and get our answer to the question of **Task 4**.
 
 ![flag](image17.png)
 
