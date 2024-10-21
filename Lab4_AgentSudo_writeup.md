@@ -297,7 +297,12 @@ Extracting the zip with the use of 7-zip gives us the text file `To_agentR.txt`.
 
 #### Question: What is the Zip-file password?
 
-`QXJIYTUx` is encoded. Decoding this by base64 gives us the following:
+<details>
+<summary>What is Base64</summary>
+Base64 encoding is a method used to convert binary data into a text format using a specific set of 64 characters. This encoding is useful for transmitting data over mediums that may not handle binary data well, such as email or URLs. The main goal is to ensure that the data remains intact without modification during transport.
+</details>
+
+`QXJIYTUx` is encoded. There are many ways of encoding a password. To find out which type of decoding method we need to use we could use [Cyberchef](https://gchq.github.io/CyberChef/) which suggests decoding by Base64. Decoding this by base64 gives us the following:
 
 ![base64_decode](image12.png)
 
