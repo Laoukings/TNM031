@@ -256,7 +256,7 @@ binwalk is a Linux command-line tool designed for analyzing and extracting data 
 The binwalk command:
 
 ```bash
-binwalk <binwalk> <cutie.png>
+binwalk <cutie.png>
 ```
 
 </details>
@@ -350,6 +350,7 @@ If we then use the command `cat` we can view the contents of `user_flag.txt` and
 ![flag](image17.png)
 
 ### Task 5: **Privilage escalation**
+Privilege escalation is a technique used in hacking to gain elevated access to resources or functionalities that are normally protected from the user or process. 
 
 ![alien_autospy](image19.png)
 
