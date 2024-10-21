@@ -239,8 +239,8 @@ The content of the FTP server:
 ![downloading](image6.png)
 
 We can see the listed files of the FTP server as:
-To_agentJ.txt
-cute-alien.jpg
+To_agentJ.txt, 
+cute-alien.jpg, 
 cutie.png
 
 Opening up the text file: To_agentJ.txt gives us the following information :
@@ -263,7 +263,7 @@ binwalk <binwalk> <cutie.png>
 
 ![zipping](image8.png)
 
-Listing the files in the extracted file gives us: 
+Listing the files in the extracted folder gives us: 
 
 ![to_agentR_txt](image9.png)
 
@@ -297,12 +297,12 @@ Extracting the zip with the use of 7-zip gives us the text file `To_agentR.txt`.
 
 #### Question: What is the Zip-file password?
 
+`QXJIYTUx` is encoded. There are many ways of encoding a password. To find out which type of decoding method we need to use we could use [Cyberchef](https://gchq.github.io/CyberChef/) which suggests decoding by Base64. Decoding this by base64 gives us the following:
+
 <details>
 <summary>What is Base64</summary>
 Base64 encoding is a method used to convert binary data into a text format using a specific set of 64 characters. This encoding is useful for transmitting data over mediums that may not handle binary data well, such as email or URLs. The main goal is to ensure that the data remains intact without modification during transport.
 </details>
-
-`QXJIYTUx` is encoded. There are many ways of encoding a password. To find out which type of decoding method we need to use we could use [Cyberchef](https://gchq.github.io/CyberChef/) which suggests decoding by Base64. Decoding this by base64 gives us the following:
 
 ![base64_decode](image12.png)
 
@@ -324,7 +324,7 @@ steghide is a command-line utility used for hiding data within various types of 
 
 ![steghide_cute_alien](image13.png)
 
-With steghide info and entering the passphrase we get `embedded file "message.txt"`
+With `steghide info` and entering the passphrase we get: embedded file "message.txt"
 
 #### Question: Who is the other (agent in full name)?
 
