@@ -352,7 +352,13 @@ If we then use the command `cat` we can view the contents of `user_flag.txt` and
 ### Task 5: **Privilage escalation**
 
 ![alien_autospy](image19.png)
+
+alien_autospy.jpg:
+
 ![alienimage](image20.png)
+
+We are interested in knowing the sudo verion. We can simply check the sudo version with `sudo --version`.
+
 ![sudo-privilage](image21.png)
 ![mr.hacker](image22.png)
 
