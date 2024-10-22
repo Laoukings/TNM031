@@ -160,7 +160,7 @@ A typical user-agent string contains several components:
 - **Device type**: Specifies the type of device being used, such as mobile, desktop, or tablet.
 </details>
 
-Therefore, the answer to the question "How do you redirect yourself to a secret page?" is **user-agent**.
+The answer to the question "How do you redirect yourself to a secret page?" is **user-agent**.
 
 #### What is the agent's name?
 
