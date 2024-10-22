@@ -38,12 +38,7 @@ Our approach to solving the challenge involves:
 
 #### Introduction to Linux
 
-If you never used Linux before it is important to understand the file structure of the operating system.
-Linux has a powerful networking stack, enabling it to function as a client, server, or router. Key features include:
-
-- Networking Tools: Utilities like ipconfig, ip, and ping are used for network configuration and diagnostics.
-- Protocols: Linux supports various network protocols, including TCP/IP, which is fundamental for internet communication.
-- Firewalls and Security: Tools like iptables and ufw allow users to configure firewalls to protect the system from unauthorized access.
+If you never used Linux before, it is important to understand the operating system's file structure.
 
 ##### Understanding the Filesystem
 
