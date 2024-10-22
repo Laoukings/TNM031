@@ -146,10 +146,9 @@ We can see that there are **3 ports open**: FTP, SSH and HTTP.
 
 When we scanned for open ports we noticed that there is a web server running on port 80. Opening the IP address in our web browser gives us:
 
-![Web browser user agent](image2.png)
+![Web browser user agent](ipwebserveragentsudo.png)
 
 Agent R tells us to use our codename to access the website. We don't have a codename but we know how to impersonate Agent R with `user-agent`.
-We see that there are 25 different agents but Agent R was not correct. there are 26 letters in the alphabet so we assume the agent names start at A. Therefore, We try again with Agent A but we get the same result as Agent R. We repeat until we find Agent C and we get:
 
 
 <details>
@@ -196,7 +195,9 @@ We run the command with the user-agent `-A` as Agent **R** and redirects enabled
 ```bash
 curl -A "R" -L <target-ip>
 ```
+![user-agent-R](image2.png)
 
+We see that there are 25 different agents but Agent R was not correct. there are 26 letters in the alphabet so we assume the agent names start at A. Therefore, We try again with Agent A but we get the same result as Agent R. We repeat until we find Agent C and we get:
 ![user-agent-res](image3.png)
 
 
@@ -228,7 +229,7 @@ Entering the ftp password crystal gives us:
 
 ![transfer_files](image5.png)
 
-Now we would like to see the content of the FTP server. By entering the command `ls` in the current directory of the FTP server we list all files and directories and download them all. 
+Now we would like to see the content of the FTP server. By entering the command `ls` in the current directory of the FTP server we list all files and directories and to download them all we write `mget *`. The download command puts the files in our current working directory. 
 The content of the FTP server:
 
 ![downloading](image6.png)
@@ -251,7 +252,11 @@ binwalk is a Linux command-line tool designed for analyzing and extracting data 
 The binwalk command:
 
 ```bash
-binwalk <cutie.png>
+binwalk <image>
+```
+Extracting to the current working folder is done with `-e`:
+```bash
+binwalk -e <image>
 ```
 
 </details>
