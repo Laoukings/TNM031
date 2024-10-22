@@ -364,8 +364,11 @@ If we then use the command `cat` we can view the contents of `user_flag.txt` and
 #### Question: What is the incident of the photo called?
 
 With the password: `hackerrules!` we can download the image alien_autospy.jpg
+
 ![alien_autospy](image19.png)
+
 alien_autospy.jpg:
+
 ![alienimage](image20.png)
 
 We reverse-search the image in Google and discover that it is named the **Roswell alien autopsy**. This picture is from a hoax alien autopsy film by Ray Santilli in 1995.
@@ -389,6 +392,7 @@ This is done by entering the `sudo -u \#$((0xffffffff))` command.
 Now we have root access, which means we hold authority over the entire system. We look in the root folder and find the text file `root.txt`:
 
 ![mr.hacker](image22.png)
+
 We found the root flag and who Agent R is: `b53a02f55b57d4439e3341834d70c062` and **DesKel**. 
 This was the final step of this write-up for **Agent Sudo**.
 Thanks for reading and _Happy Hacking!_
