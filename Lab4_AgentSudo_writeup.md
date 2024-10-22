@@ -71,7 +71,7 @@ the file system can be accessed through the _file explorer_ similar to Windows a
 
 ### Setting up the Linux Environment
 
-There are two ways of doing the challenge. The first option is by using TryHackMe's provided virtual machine which is called AttackBox, which is free for 1 hour a day. The second option is to use your own install of Linux, such as Kali Linux, and use the VPN provided by TryHackMe to connect to the challenge.
+There are two ways of doing the challenge. The first option is by using TryHackMe's provided virtual machine which is called AttackBox, which is free for 1 hour a day. The second option is to use your install of Linux, such as Kali Linux, and use the VPN provided by TryHackMe to connect to the challenge.
 
 ##### Accessing the AttackBox on TryHackMe
 
@@ -79,7 +79,7 @@ To access the AttackBox on TryHackMe, navigate to the **Agent Sudo** room. Look 
 
 ##### Accessing the challenge with your own Linux Machine
 
-To access the challenge with your own Linux machine, you need to connect to TryHackMe's network using a VPN. First, download the OpenVPN configuration file from the TryHackMe website. Then, use the `openvpn` command to connect: `sudo openvpn --config <path-to-config-file>`. Once connected, you can access the challenge environment as if you were using the AttackBox. The required tools might not be installed but are easily installed if needed.
+To access the challenge with your own Linux machine, you need to connect to TryHackMe's network using a VPN. First, download the OpenVPN configuration file from the TryHackMe website. Then, connect to the `openvpn` command: `sudo openvpn --config <path-to-config-file>`. Once connected, you can access the challenge environment as if using the AttackBox. The required tools might not be installed but are easily installed if needed.
 
 #### Solution
 
