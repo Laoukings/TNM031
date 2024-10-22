@@ -233,7 +233,7 @@ Entering the ftp password crystal gives us:
 
 ![transfer_files](image5.png)
 
-Now we would like to see the content of the FTP server. By entering the command ls in the current directory of the FTP server we list all files and directories and download them all. 
+Now we would like to see the content of the FTP server. By entering the command `ls` in the current directory of the FTP server we list all files and directories and download them all. 
 The content of the FTP server:
 
 ![downloading](image6.png)
@@ -306,7 +306,7 @@ Base64 encoding is a method used to convert binary data into a text format using
 
 ![base64_decode](image12.png)
 
-This gives us our answer to our qustion: `area51`
+This gives us our answer to our question: `area51`
 
 #### Question: What is the Steg password?
 
