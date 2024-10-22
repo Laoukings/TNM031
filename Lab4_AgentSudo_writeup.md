@@ -220,7 +220,7 @@ Replace `<username>`, `<target-ip>`, and `<protocol>` with the appropriate value
 
 #### Question: What is the FTP password?
 
-By letting hydra run for som time it gives gives us the password: crystal which will be our answer to the first question of Task 3.
+By letting hydra run for som time it gives us the password: crystal which will be our answer to the first question of Task 3.
 
 
 ![hydra_crystal](image4.png)
@@ -287,14 +287,14 @@ john <zip.hash>
 
 ![cutie_png_extracted](image10.png)
 
-Extracting the zip with the use of 7-zip gives us the text file `To_agentR.txt`. The text file contains a word: `QXJIYTUx`
+Extracting the zip with the use of 7-zip gives us the text file `To_agentR.txt`. The text file contains a word: `QXJIYTUx`.
 
 ```bash
 7z e <targeted-zipfile>
 ```
 
 ![password](image11.png)
-
+![passwordtxt](encrytpedpassagentsudo.png)
 #### Question: What is the Zip-file password?
 
 `QXJIYTUx` is encoded. There are many ways of encoding a password. To find out which type of decoding method we need to use we could use [Cyberchef](https://gchq.github.io/CyberChef/) which suggests decoding by Base64. Decoding this by base64 gives us the following:
@@ -335,13 +335,25 @@ Opening the contents of this textfile gives us:
 
 ![hi_james_txt](image15.png)
 
-This gives us both the steg password `hackerrules` and the other agents full name `James` as answers to our questions above.
+This gives us both the steg password `hackerrules!` and the other agents full name `James` as answers to our questions above.
 
 ### Task 4: **Capture the flag**
 
 #### Question: What is the user flag?
 
-We can here use the SSH information to get in to James machine and view the files :
+<details>
+   <summary>What is SSH?</summary>
+
+**SSH** (**S**ecure **Sh**ell) is a network protocol that provides a secure way to access a remote computer over an unsecured network. It offers strong authentication and encrypted data communications between two computers, connecting through a secure channel over the internet.
+To connect to a remote server using SSH, you use the following command in the terminal:
+   
+```bash
+ssh <username@host-ip>
+```
+   
+</details>
+
+We can here use the SSH information to get into James' machine and view the files :
 
 ![james](image16.png)
 
@@ -349,26 +361,35 @@ First we list all the contents of the directory with `ls`.
 If we then use the command `cat` we can view the contents of `user_flag.txt` and get our answer to the question of **Task 4**.
 
 ![flag](image17.png)
+#### Question: What is the incident of the photo called?
+
+With the password: `hackerrules!` we can download the image alien_autospy.jpg
+![alien_autospy](image19.png)
+alien_autospy.jpg:
+![alienimage](image20.png)
+
+We reverse-search the image in Google and discover that it is named the **Roswell alien autopsy**. This picture is from a hoax alien autopsy film by Ray Santilli in 1995.
 
 ### Task 5: **Privilage escalation**
 Privilege escalation is a technique used in hacking to gain elevated access to resources or functionalities that are normally protected from the user or process. 
-With the password: hackerrules we can download the image alien_autospy.jpg
 
-![alien_autospy](image19.png)
+#### Question: CVE number for the escalation?
 
-alien_autospy.jpg:
+We run the command `sudo -l` and see what `Agent James` can access. We notice that we can run: `(ALL, ! root) /bin/bash`. We Google and find an exploit we can do: [**CVE-2019-14287**](https://www.exploit-db.com/exploits/47502) if the sudo version is 1.8.27 or lower. 
 
-![alienimage](image20.png)
+#### Question: What is the root flag?
 
 We are interested in knowing the sudo verion. We can simply check the sudo version with `sudo --version`.
 
 ![sudo-privilage](image21.png)
 
-The sudo version is 1.8.21 and we need to figure out if we somehow can exploit this. With the help of google we can exploit that the sudo version older than 1.8.28 by bypassing the !root configuration.
-This is done by entering the `sudo -u \#$((0xffffffff))` command
+The sudo version is 1.8.21. Therefore we can bypass the !root configuration with the command given from CVE-2019-14287:
+This is done by entering the `sudo -u \#$((0xffffffff))` command. 
+
+Now we have root access, which means we hold authority over the entire system. We look in the root folder and find the text file `root.txt`:
 
 ![mr.hacker](image22.png)
-
+We found the root flag and who Agent R is: `b53a02f55b57d4439e3341834d70c062` and **DesKel**. 
 This was the final step of this write-up for **Agent Sudo**.
 Thanks for reading and _Happy Hacking!_
 
@@ -376,8 +397,8 @@ Thanks for reading and _Happy Hacking!_
 ### Conclusion
 
 The challenge offered valuable insights into network vulnerabilities and hacking concepts, emphasizing the critical importance of security measures. 
-Identifying open ports revealed potential entry points for unauthorized access, while learning how to redirect to hidden pages highlighted the need for robust web application security. 
-Recognizing the agent name and understanding the context of other agents underscored the significance of collaboration within a network. 
+Identifying open ports revealed potential entry points for unauthorized access while learning how to redirect to hidden pages highlighted the need for robust web application security. 
+Recognizing the agent's name and understanding the context of other agents underscored the significance of collaboration within a network. 
 Techniques such as hash-cracking and brute force illustrated the vulnerabilities associated with weak passwords, reinforcing the necessity for strong password policies. 
 Accessing FTP and SSH passwords showcased the risks tied to insecure file transfers and remote access management, respectively. 
 Cracking zip-file and steg passwords demonstrated the limitations of traditional encryption methods. 
