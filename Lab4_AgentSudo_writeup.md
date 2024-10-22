@@ -389,7 +389,7 @@ Now we have root access, which means we hold authority over the entire system. W
 
 We found the root flag and who Agent R is: `b53a02f55b57d4439e3341834d70c062` and **DesKel**. 
 This was the final step of this write-up for **Agent Sudo**.
-Thanks for reading and _Happy Hacking!_
+Thanks for reading and _Happy Hacking_ Pierangelo!
 
 
 ### Conclusion
