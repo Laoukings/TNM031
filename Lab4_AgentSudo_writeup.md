@@ -75,7 +75,7 @@ To access the AttackBox on TryHackMe, navigate to the **Agent Sudo** room. Look 
 
 To access the challenge with your own Linux machine, you need to connect to TryHackMe's network using a VPN. First, download the OpenVPN configuration file from the TryHackMe website. Then, connect to the `openvpn` command: `sudo openvpn --config <path-to-config-file>`. Once connected, you can access the challenge environment as if using the AttackBox. The required tools might not be installed but are easily installed if needed.
 
-#### Solution
+### Solution
 
 ### Task 1: **Connect to THM network**
 
