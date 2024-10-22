@@ -369,6 +369,10 @@ This is done by entering the `sudo -u \#$((0xffffffff))` command
 
 ![mr.hacker](image22.png)
 
+This was the final step of this write-up for **Agent Sudo**.
+Thanks for reading and _Happy Hacking!_
+
+
 ### Conclusion
 
 The challenge offered valuable insights into network vulnerabilities and hacking concepts, emphasizing the critical importance of security measures. 
@@ -381,5 +385,3 @@ Successfully capturing the user flag not only validated the skills acquired duri
 Overall, this experience highlighted the need for continuous learning and proactive strategies to address potential security threats in an ever-evolving landscape.
 
 ---
-
-_Happy Hacking!_
