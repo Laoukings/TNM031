@@ -345,12 +345,14 @@ We can here use the SSH information to get in to James machine and view the file
 
 ![james](image16.png)
 
+First we list all the contents of the directory with `ls`.
 If we then use the command `cat` we can view the contents of `user_flag.txt` and get our answer to the question of **Task 4**.
 
 ![flag](image17.png)
 
 ### Task 5: **Privilage escalation**
 Privilege escalation is a technique used in hacking to gain elevated access to resources or functionalities that are normally protected from the user or process. 
+With the password: hackerrules we can download the image alien_autospy.jpg
 
 ![alien_autospy](image19.png)
 
@@ -362,11 +364,10 @@ We are interested in knowing the sudo verion. We can simply check the sudo versi
 
 ![sudo-privilage](image21.png)
 
-The sudo version is 1.8.21 and we need to figure out if we somehow can exploit this.
+The sudo version is 1.8.21 and we need to figure out if we somehow can exploit this. With the help of google we can exploit that the sudo version older than 1.8.28 by bypassing the !root configuration.
+This is done by entering the `sudo -u \#$((0xffffffff))` command
 
 ![mr.hacker](image22.png)
-
-
 
 ### Conclusion
 
